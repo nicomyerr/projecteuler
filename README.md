@@ -1,6 +1,6 @@
 # projecteuler
 
-repo for my solutions of projecteuler problems
+solutions for project-euler problems
 
 | language | problems solved |
 | -------- | --------------- |
