@@ -7,6 +7,7 @@ public class p2 {
     int sum = 0;
     int value = 1;
     int nextValue = 2;
+
     while (value < 4000000) {
       if (value % 2 == 0) {
         sum += value;
@@ -15,6 +16,7 @@ public class p2 {
       nextValue += value;
       value = tmp;
     }
+
     return sum;
   }
 }

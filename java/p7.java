@@ -6,12 +6,14 @@ public class p7 {
   private static int solve() {
     int number = 2;
     int counter = 1;
+
     while (counter <= 10001) {
       if (isPrime(number)) {
         counter++;
       }
       number++;
     }
+
     return number - 1;
   }
 

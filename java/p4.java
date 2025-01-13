@@ -5,6 +5,7 @@ public class p4 {
 
   private static int solve() {
     int largestPalindrome = 1;
+
     for (int factor1 = 1; factor1 < 1000; factor1++) {
       for (int factor2 = 1; factor2 < 1000; factor2++) {
         int product = factor1 * factor2;
@@ -15,6 +16,7 @@ public class p4 {
         }
       }
     }
+
     return largestPalindrome;
   }
 

@@ -8,9 +8,11 @@ public class p3 {
 
   private static int solve() {
     long primeNumber = 600851475143L;
+
     long tmpPrimeNumber = primeNumber;
     List<Integer> primeFactors = new ArrayList<>();
     int i = 2;
+
     while (!isProduct(primeNumber, primeFactors)) {
       if (isPrime(i) && tmpPrimeNumber % i == 0) {
         tmpPrimeNumber /= i;
@@ -18,6 +20,7 @@ public class p3 {
       }
       i++;
     }
+
     return primeFactors.getLast();
   }
 

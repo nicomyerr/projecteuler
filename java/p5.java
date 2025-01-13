@@ -6,9 +6,11 @@ public class p5 {
   private static int solve() {
     // TODO: better way to determine start number?
     int number = 20;
+
     while (!isDivisible(number)) {
       number++;
     }
+
     return number;
   }
 
