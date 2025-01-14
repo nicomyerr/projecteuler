@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +14,8 @@ public class p3 {
     List<Integer> primeFactors = new ArrayList<>();
     int i = 2;
 
-    while (!isProduct(primeNumber, primeFactors)) {
-      if (isPrime(i) && tmpPrimeNumber % i == 0) {
+    while (!Functions.isProduct(primeNumber, primeFactors)) {
+      if (Functions.isPrime(i) && tmpPrimeNumber % i == 0) {
         tmpPrimeNumber /= i;
         primeFactors.add(i);
       }
@@ -22,22 +23,5 @@ public class p3 {
     }
 
     return primeFactors.getLast();
-  }
-
-  private static boolean isProduct(final long product, final List<Integer> factors) {
-    long factorsProduct = 1;
-    for (int i = 0; i < factors.size(); i++) {
-      factorsProduct *= factors.get(i);
-    }
-    return product == factorsProduct;
-  }
-
-  private static boolean isPrime(final int number) {
-    for (int i = 1; i <= number; i++) {
-      if (number % i == 0 && i != 1 && i != number) {
-        return false;
-      }
-    }
-    return true;
   }
 }

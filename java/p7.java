@@ -8,21 +8,12 @@ public class p7 {
     int counter = 1;
 
     while (counter <= 10001) {
-      if (isPrime(number)) {
+      if (Functions.isPrime(number)) {
         counter++;
       }
       number++;
     }
 
     return number - 1;
-  }
-
-  private static boolean isPrime(final int number) {
-    for (int i = 1; i <= number; i++) {
-      if (number % i == 0 && i != 1 && i != number) {
-        return false;
-      }
-    }
-    return true;
   }
 }

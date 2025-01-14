@@ -9,7 +9,7 @@ public class p4 {
     for (int factor1 = 1; factor1 < 1000; factor1++) {
       for (int factor2 = 1; factor2 < 1000; factor2++) {
         int product = factor1 * factor2;
-        if (isPalindrome(product)) {
+        if (Functions.isPalindrome(product)) {
           if (largestPalindrome < product) {
             largestPalindrome = product;
           }
@@ -18,15 +18,5 @@ public class p4 {
     }
 
     return largestPalindrome;
-  }
-
-  private static boolean isPalindrome(final int number) {
-    String numberString = String.valueOf(number);
-    for (int i = 0; i < numberString.length() / 2; i++) {
-      if (numberString.charAt(i) != numberString.charAt((numberString.length() - 1) - i)) {
-        return false;
-      }
-    }
-    return true;
   }
 }

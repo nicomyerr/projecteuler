@@ -9,23 +9,12 @@ public class p8 {
 
     for (int i = 0; i < number.length() - 12; i++) {
       String adjacentDigits = number.substring(i, i + 13);
-      long product = productOfString(adjacentDigits);
+      long product = Functions.productOfString(adjacentDigits);
       if (greatesProduct < product) {
         greatesProduct = product;
       }
     }
 
     return greatesProduct;
-  }
-
-  private static long productOfString(final String number) {
-    long product = 1;
-
-    for (int i = 0; i < number.length(); i++) {
-      long tmp = Long.valueOf(String.valueOf(number.charAt(i)));
-      product *= tmp;
-    }
-
-    return product;
   }
 }

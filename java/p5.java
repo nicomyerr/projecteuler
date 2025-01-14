@@ -7,19 +7,10 @@ public class p5 {
     // TODO: better way to determine start number?
     int number = 20;
 
-    while (!isDivisible(number)) {
+    while (!Functions.isDivisible(number)) {
       number++;
     }
 
     return number;
-  }
-
-  private static boolean isDivisible(final int number) {
-    for (int i = 1; i <= 20; i++) {
-      if (number % i != 0) {
-        return false;
-      }
-    }
-    return true;
   }
 }
